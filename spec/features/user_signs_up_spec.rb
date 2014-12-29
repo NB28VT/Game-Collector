@@ -25,7 +25,9 @@ Acceptance Criteria
       fill_in "Password confirmation", with: "supersecret"
       click_on "Sign up"
       expect(page).to have_content "Welcome! Your account has been created."
-
+      expect(page).to_not have_link "Sign Up"
+      expect(page).to have_link "Sign Out"
+    
     end
 
 
